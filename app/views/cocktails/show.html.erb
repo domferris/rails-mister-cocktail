@@ -1,0 +1,27 @@
+<div class="cocktail-container">
+
+  <%= image_tag 'https://source.unsplash.com/random/?drink', alt: 'cocktail image', class: 'cocktail-image' %>
+
+  <div class="cocktail-info">
+    <h1><%= @cocktail.name %></h1>
+    <h5>Description</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, rerum, aut. Nam fugiat accusamus, ipsa quia molestiae quis, omnis debitis! Suscipit aspernatur doloremque culpa nihil.</p>
+    <div class="cocktail-controls">
+      <%= link_to edit_cocktail_path(@cocktail) do %>
+        <i class="fas fa-edit btn-cocktail"></i>
+      <% end %>
+      <%= link_to cocktail_path(@cocktail), method: :delete do %>
+        <i class="fas fa-trash btn-cocktail"></i>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="ingredients-info">
+    <h3>Ingredients</h3>
+    <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to dose_path(dose), method: :delete do %><i class="fas fa-trash btn-cocktail-sm"></i><% end %></p>
+    <% end %>
+    <%= link_to '+ add an ingredient', new_cocktail_dose_path(@cocktail) %>
+  </div>
+
+</div>

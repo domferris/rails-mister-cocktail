@@ -1,0 +1,64 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.cocktails {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  a {
+    color: white;
+    font-size: 1.8em;
+    transition: .15s ease-in-out;
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.02);
+    }
+  }
+}
+
+.cocktail-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  border-radius: 4px;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(https://source.unsplash.com/random/?drink);
+  background-size: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cocktail-container {
+  // border: 1px solid red;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  .cocktail-image {
+    width: 30%;
+    height: 300px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  .cocktail-info {
+    // border: 1px solid blue;
+    position: relative;
+    padding: 20px;
+    .cocktail-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  .ingredients-info {
+    // border: 1px solid green;
+    width: 45%;
+    padding: 20px;
+    margin-left: 20px;
+    background: white;
+  }
+}

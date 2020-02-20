@@ -12,7 +12,16 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav class="navbar-lewagon">
+    <%= link_to cocktails_path do %>
+      <i class="fas fa-glass-martini-alt btn-cocktail"></i>
+    <% end %>
+    <%= link_to cocktails_path do %><h1>Heads or Cocktails</h1><% end %>
+    <%= link_to '+ new cocktail', new_cocktail_path, class: "btn-cocktail" %>
+  </nav>
+
   <body>
     <%= yield %>
   </body>
+
 </html>
