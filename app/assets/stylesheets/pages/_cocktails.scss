@@ -10,7 +10,7 @@
   a {
     color: white;
     font-size: 1.8em;
-    transition: .15s ease-in-out;
+    transition: .18s ease-in-out;
     &:hover {
       text-decoration: none;
       transform: scale(1.02);
@@ -18,16 +18,12 @@
   }
 }
 
-.cocktail-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 250px;
+.cocktail-image {
+  width: 100vw;
+  height: 300px;
   border-radius: 4px;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(https://source.unsplash.com/random/?drink);
-  background-size: cover;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  // border: 1px solid red;
 }
 
 .cocktail-container {
@@ -35,30 +31,40 @@
   padding: 32px;
   display: flex;
   justify-content: space-between;
-  .cocktail-image {
-    width: 30%;
-    height: 300px;
-    border-radius: 4px;
-    object-fit: cover;
-    margin-right: 20px;
-  }
 
   .cocktail-info {
     // border: 1px solid blue;
     position: relative;
     padding: 20px;
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    p {
+      width: 85%;
+    }
+
     .cocktail-controls {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
+      top: 20px;
+      right: 20px;
     }
   }
 
-  .ingredients-info {
+  .ingredients-card {
     // border: 1px solid green;
-    width: 45%;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     margin-left: 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    h3 {
+      margin-bottom: 16px;
+    }
   }
 }

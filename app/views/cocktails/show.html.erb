@@ -1,27 +1,26 @@
+<%= image_tag 'https://source.unsplash.com/random/?drink', alt: 'cocktail image', class: 'cocktail-image', style: 'background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));' %>
+
 <div class="cocktail-container">
-
-  <%= image_tag 'https://source.unsplash.com/random/?drink', alt: 'cocktail image', class: 'cocktail-image' %>
-
   <div class="cocktail-info">
     <h1><%= @cocktail.name %></h1>
     <h5>Description</h5>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, rerum, aut. Nam fugiat accusamus, ipsa quia molestiae quis, omnis debitis! Suscipit aspernatur doloremque culpa nihil.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, rerum, aut. Nam fugiat accusamus, ipsa quia molestiae quis, omnis debitis! Suscipit aspernatur doloremque culpa nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nesciunt, saepe natus!</p>
     <div class="cocktail-controls">
       <%= link_to edit_cocktail_path(@cocktail) do %>
-        <i class="fas fa-edit btn-cocktail"></i>
+        <i class="fas fa-edit btn-cocktail-sm"></i>
       <% end %>
       <%= link_to cocktail_path(@cocktail), method: :delete do %>
-        <i class="fas fa-trash btn-cocktail"></i>
+        <i class="fas fa-trash btn-cocktail-sm"></i>
       <% end %>
     </div>
   </div>
 
-  <div class="ingredients-info">
+  <div class="ingredients-card">
     <h3>Ingredients</h3>
     <% @cocktail.doses.each do |dose| %>
       <p><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to dose_path(dose), method: :delete do %><i class="fas fa-trash btn-cocktail-sm"></i><% end %></p>
     <% end %>
-    <%= link_to '+ add an ingredient', new_cocktail_dose_path(@cocktail) %>
+    <%= link_to '+ add an ingredient', new_cocktail_dose_path(@cocktail), class: 'btn-cocktail-sm' %>
   </div>
 
 </div>
