@@ -1,0 +1,13 @@
+  <nav class="navbar-lewagon sticky-top">
+    <%= link_to cocktails_path do %>
+      <div class="nav-title">
+        <%= image_tag "heads-or-cocktails.png", alt: "logo", class: 'nav-logo' %>
+        <h1>HEADS OR COCKTAILS</h1>
+      </div>
+    <% end %>
+    <%= link_to new_cocktail_path, class: "btn-cocktail-sm" do %>
+      <i class="fas fa-plus"></i>
+    <% end %>
+  </nav>
+
+

@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .cocktails {
-  padding: 40px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   a {
     color: white;
@@ -18,35 +18,64 @@
   }
 }
 
-.cocktail-image {
+.cocktail-background {
   width: 100vw;
-  height: 300px;
-  border-radius: 4px;
-  object-fit: cover;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
 }
 
 .cocktail-container {
-  // border: 1px solid red;
+  width: 60%;
+  margin: 150px auto 0;
   padding: 32px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  background: white;
+  padding: 40px;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+  h1 {
+    margin-bottom: 32px;
+  }
 
   .cocktail-info {
-    // border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+      margin-bottom: 16px;
+    }
+
+    .cocktail-details {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+
+      p {
+        width: 90%;
+      }
+    }
+  }
+  .cocktail-controls {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+
+  .cocktail-ingredients {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 30%;
+    flex-shrink: 0;
     position: relative;
-    padding: 20px;
-    h1 {
-      margin-bottom: 30px;
-    }
 
-    p {
-      width: 85%;
-    }
-
-    .cocktail-controls {
+    .ingredient-add {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      bottom: 0;
     }
   }
 }
