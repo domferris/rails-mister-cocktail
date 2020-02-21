@@ -20,6 +20,16 @@
   position: relative;
 }
 
+.edit-dose-card {
+  width: 50%;
+  margin: 150px auto;
+  padding: 60px 80px;
+  text-align: center;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
 .new-dose-card {
   width: 50%;
   margin: 150px auto;
@@ -28,4 +38,8 @@
   background: white;
   border-radius: 2px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+  h5 {
+    margin-bottom: 32px;
+  }
 }
