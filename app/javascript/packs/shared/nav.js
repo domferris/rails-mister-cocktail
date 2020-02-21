@@ -1,6 +1,3 @@
-
-
-
 const openNewCocktail = () => {
   const newCocktailButton = document.getElementById('new-cocktail');
   const newCocktailForm = document.getElementById('new-cocktail-form');
