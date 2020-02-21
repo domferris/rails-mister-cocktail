@@ -1,5 +1,6 @@
 class CocktailsController < ApplicationController
   before_action :find_cocktail, only: [:show, :edit, :update, :destroy]
+  before_action :set_new_cocktail, only: [:index, :new]
 
   def index
     @cocktails = Cocktail.all
@@ -7,16 +8,15 @@ class CocktailsController < ApplicationController
 
   def show; end
 
-  def new
-    @cocktail = Cocktail.new
-  end
+  def new; end
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      @cocktails = Cocktail.all
+      render :index
     end
   end
 
@@ -44,5 +44,9 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params.require(:cocktail).permit(:name, :image_url)
+  end
+
+  def set_new_cocktail
+    @cocktail = Cocktail.new
   end
 end

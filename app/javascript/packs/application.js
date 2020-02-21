@@ -17,3 +17,11 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { openNewCocktail, closeCocktailForm } from './shared/nav';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  openNewCocktail();
+  closeCocktailForm();
+});

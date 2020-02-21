@@ -1,5 +1,7 @@
+<i class="fas fa-times btn-cocktail-sm" id="close-form"></i>
+<% @cocktail = Cocktail.new if action_name == 'show' %>
 <%= simple_form_for @cocktail do |f| %>
-<%= f.input :name %>
-<%= f.input :image_url %>
-<%= f.button :submit, class: 'btn-primary' %>
+  <%= f.input :name, label: false, placeholder: "Cocktail Name" %>
+  <%= f.input :image_url, label: false, placeholder: "Image URL" %>
+  <%= f.button :submit, class: 'btn-cocktail' %>
 <% end %>

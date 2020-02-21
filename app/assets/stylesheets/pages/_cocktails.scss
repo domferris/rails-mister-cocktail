@@ -7,10 +7,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+
   a {
     color: white;
     font-size: 1.8em;
-    transition: .18s ease-in-out;
+    transition: 0.18s ease-in-out;
+
     &:hover {
       text-decoration: none;
       transform: scale(1.02);
@@ -52,7 +54,6 @@
     .cocktail-details {
       display: flex;
       flex-direction: column;
-      border-right: 1px solid rgba(0, 0, 0, 0.3);
 
       p {
         width: 90%;
@@ -72,10 +73,22 @@
     flex-basis: 30%;
     flex-shrink: 0;
     position: relative;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
 
     .ingredient-add {
       position: absolute;
       bottom: 0;
     }
   }
+}
+
+#new-cocktail-form {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+}
+
+.hidden {
+  display: none;
 }
