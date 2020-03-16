@@ -2,6 +2,7 @@
 <% @cocktail = Cocktail.new if action_name == 'show' %>
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name, label: false, placeholder: "Cocktail Name" %>
+  <%= f.input :description, label: false, placeholder: "A short description..." %>
   <%= f.input :photo, as: :file, label: false %>
   <%= f.button :submit, class: 'btn-cocktail' %>
 <% end %>
