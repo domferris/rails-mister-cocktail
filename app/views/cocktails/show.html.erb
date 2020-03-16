@@ -5,7 +5,7 @@
   <div class="cocktail-info">
     <div class="cocktail-details">
       <h4>Description</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, rerum, aut. Nam fugiat accusamus, ipsa quia molestiae quis, omnis debitis! Suscipit aspernatur doloremque culpa nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta nesciunt, saepe natus!</p>
+      <p><%= @cocktail.description if @cocktail.description %></p>
     </div>
     <div class="cocktail-ingredients">
       <h4>Ingredients</h4>
@@ -30,6 +30,6 @@
     <% end %>
   </div>
 </div>
-<div class="reviews-container">
+<!-- <div class="reviews-container">
   <h4>Reviews for <%= @cocktail.name.downcase %></h4>
-</div>
+</div> -->
